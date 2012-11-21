@@ -1,0 +1,11 @@
+--- origsrc/Padre-0.96/lib/Padre/Constant.pm	2012-04-19 07:36:17.000000000 -0500
++++ src/Padre-0.96/lib/Padre/Constant.pm	2012-11-20 20:14:08.401954600 -0600
+@@ -14,7 +14,7 @@ our $VERSION    = '0.96';
+ our $COMPATIBLE = '0.57';
+ 
+ # Convenience constants for the operating system
+-use constant WIN32 => !!( ( $^O eq 'MSWin32' ) or ( $^O eq 'cygwin' ) );
++use constant WIN32 => !!( $^O eq 'MSWin32' );
+ use constant MAC => !!( $^O eq 'darwin' );
+ use constant UNIX => !( WIN32 or MAC );
+ 

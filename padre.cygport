@@ -1,0 +1,29 @@
+CPAN_AUTHOR=plaven
+ORIG_PN="Padre"
+inherit perl
+
+NAME="padre"
+VERSION=0.96
+RELEASE=1
+CATEGORY="Devel Perl"
+SUMMARY="Perl IDE"
+DESCRIPTION="Padre is an integrated development environment for Perl, a text
+editor that is simple to use for new Perl programmers but also supports large
+multi-lingual and multi-technology projects. Our primary focus is to create a
+peerless environment for learning Perl and creating Perl scripts, modules and
+distributions, with an extensible plug-in system to support the addition of
+related functionality and languages and to support advanced developers taking
+the editor anywhere they want it to go."
+REQUIRES="perl-App-cpanminus"
+HOMEPAGE="http://padre.perlide.org/"
+
+PATCH_URI="0.96-cygwin.patch"
+
+src_install() {
+	cd ${B}
+	perl_install
+	perl_postinst
+
+	newicon ${S}/share/icons/padre/64x64/logo.png padre.png
+	make_desktop_entry padre "Padre" padre "Development;IDE" "Perl IDE"
+}
