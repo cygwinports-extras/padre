@@ -3,7 +3,7 @@ ORIG_PN="Padre"
 inherit perl
 
 NAME="padre"
-VERSION=0.96
+VERSION=0.98
 RELEASE=1
 CATEGORY="Devel Perl"
 SUMMARY="Perl IDE"
