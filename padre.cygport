@@ -3,7 +3,7 @@ ORIG_PN="Padre"
 inherit perl
 
 NAME="padre"
-VERSION=0.98
+VERSION=1.00
 RELEASE=1
 CATEGORY="Devel Perl"
 SUMMARY="Perl IDE"
@@ -18,6 +18,8 @@ REQUIRES="perl-App-cpanminus"
 HOMEPAGE="http://padre.perlide.org/"
 
 PATCH_URI="0.96-cygwin.patch"
+
+ARCH=noarch
 
 src_install() {
 	cd ${B}
